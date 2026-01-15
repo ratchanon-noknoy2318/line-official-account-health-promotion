@@ -1,54 +1,63 @@
-# Health Promotion Integration Service
-**Kamphaeng Phet Community Municipal Hospital**
-*LINE Official Account Platform – Health Promotion Division*
+# Technical Specification Framework
+**Institutional Infrastructure: Kamphaeng Phet Community Municipal Hospital**
+*Document Identifier: KPC-HIS-HEALTH-002*
+*Subject: Health Promotion Integration Service (Webhook & Flex Synthesis Engine)*
 
 ---
 
-## 1. System Overview
+## 1. Executive Summary
 
-The **Health Promotion Integration Service** is a specialized module designed to manage and execute public health communication strategies via the LINE Messaging API. Its primary function is to orchestrate high-fidelity content delivery, including targeted broadcasts and dynamic Flex Messages, enabling the hospital to effectively disseminate health information and campaign updates to the community.
+The **Health Promotion Integration Service** constitutes a specialized architectural component engineered for the systematic dissemination of public health intelligence via the LINE Messaging Interface. This system orchestrates the delivery of high-fidelity content, including automated mass-broadcasts and dynamic Flex Messages, ensuring that institutional health campaigns are executed with technical precision, cryptographic security, and administrative efficiency.
 
-| Attribute | Specification |
+| Systematic Attribute | Technical Specification |
 |:---|:---|
-| **Module Name** | Health Promotion Webhook & Flex Engine |
-| **Organization** | Kamphaeng Phet Community Municipal Hospital |
-| **Primary Scope** | Broadcasts, Flex Messaging, and Event Handling |
-| **Operational Role** | Content Delivery & Integration Middleware |
+| **System Identity** | KPC-Health-Promotion-Integration |
+| **Functional Classification** | Content Delivery & Integration Middleware |
+| **Architecture Paradigm** | Asynchronous Event & Broadcast Management |
+| **Authentication Standard** | HMAC-SHA256 Cryptographic Verification |
 
-## 2. Interface Specifications
+---
 
-This section demonstrates the visual components rendered on the user's device, focusing on **Flex Messages** (e.g., Health Cards, Appointment Reminders) or the **Rich Menu** navigation used for health campaigns.
+## 2. Institutional Interface Specifications
+
+The digital interface layer is governed by structured **Flex Message** and **Rich Menu** protocols. These components are designed to facilitate high-engagement healthcare communication, providing constituents with standardized access to health screening schedules, immunization updates, and wellness resources.
 
 <p align="center">
-  <img src="richmenu.png" alt="User Interface Preview" width="100%" style="border: 1px solid #ddd;">
+  <img src="richmenu.png" alt="Health Promotion Interface Protocol" width="100%" style="border: 1.5px solid #1a1a1a; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
 </p>
-<p align="center"><em>Figure 1: Health Promotion Interface & Flex Message Layout</em></p>
+<p align="center"><strong>Exhibit B:</strong> <em>Architectural Layout of Health Promotion Service Interface</em></p>
 
-## 3. Architecture & Operational Workflow
+---
 
-The system utilizes a modular architecture to handle incoming events and outgoing broadcasts. The workflow below illustrates the process of validating a webhook event and generating a structured Flex Message response.
+## 3. Transactional Architecture & Procedural Workflow
+
+The operational lifecycle of each inbound request is delineated in the following flowchart. The architecture enforces a mandatory validation phase at the security perimeter to ensure the integrity of the data transmission during the synthesis and dissemination of structured health content.
 
 ```mermaid
-sequenceDiagram
-    participant User as End User
-    participant LINE as LINE Platform
-    participant Webhook as Webhook Endpoint
-    participant FlexEngine as Flex Message Engine
-    participant Backend as Broadcast API
-
-    User->>LINE: Interacts (e.g., Taps Campaign)
-    LINE->>Webhook: HTTPS POST /webhook
-    Note right of LINE: X-Line-Signature header
+graph TD
+    %% Node Definitions
+    A([LINE Gateway Ingress]) --> B[HTTPS POST Request /webhook]
+    B --> C{Security Validation<br/>Gateway}
     
-    rect rgb(240, 240, 240)
-        Note over Webhook: Security & Validation
-        Webhook->>Webhook: Verify Signature
-    end
-
-    alt Valid Request
-        Webhook->>Backend: Fetch Campaign Data
-        Backend-->>FlexEngine: Return Health Data
-        FlexEngine->>FlexEngine: Construct JSON Payload
-        FlexEngine->>LINE: Push/Reply Flex Message
-        LINE->>User: Renders Flex Message
-    end
+    %% Security & Validation Logic
+    C -- Authentication Failure --> D[401 Unauthorized & Security Logging]
+    C -- Verified Origin --> E[Event Orchestration & Context Parsing]
+    
+    %% Content Processing Logic
+    E --> F{Event Routing<br/>Matrix}
+    F -- Actionable Event --> G[Internal Broadcast API Request]
+    F -- Administrative Event --> H[Subscriber Profile Synchronization]
+    
+    %% Content Synthesis
+    G --> I[Health Promotion API Integration]
+    I --> J[Flex Message Synthesis Engine]
+    J --> K[JSON Payload Object Construction]
+    
+    %% Terminal Response Delivery
+    K --> L[Outbound API Transmission]
+    L --> M([200 OK Status Acknowledgement])
+    
+    %% Styling for Professionalism
+    style C fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style J fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style F fill:#f9f9f9,stroke:#333,stroke-width:2px
