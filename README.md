@@ -1,48 +1,60 @@
-<p align="center">
-  <img src="richmenu.png" alt="Health Promotion Interface Protocol" width="550" style="border: 2px solid #1a1a1a; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-  <br>
-  <em><strong>Exhibit B:</strong> Architectural Layout of Health Promotion Service Interface (5 grid)</em>
-</p>
+# OFFICIAL SYSTEM SPECIFICATION (SIS)
+## Health Promotion & Maternal Care Interface | KPPMCH
 
 ---
 
-| SYSTEM IDENTITY & INFRASTRUCTURE | |
+### I. DOCUMENT ADMINISTRATION
+| ATTRIBUTE | SPECIFICATION |
 | :--- | :--- |
-| **Institution** | Kamphaeng Phet Community Municipal Hospital |
-| **Identifier** | KPC-HIS-HEALTH-002 |
-| **Subject** | Health Promotion Integration Service (Webhook Engine) |
-| **Classification** | Internal Use Only (Confidential) |
-| **Revision** | 1.0.5 (2026) |
+| Project Identifier | KPC-HIS-HEALTH-002 |
+| System Module | Health Promotion Integration Service (Webhook Engine) |
+| Organization | Kamphaeng Phet Municipal Community Hospital |
+| Classification | Official Government / Internal Confidential |
+| Revision | 1.0.5 (Production Release 2026) |
 
 ---
 
-| CORE ARCHITECTURAL SPECIFICATION | |
+### II. INTERFACE ARCHITECTURE
+| COMPONENT | VISUAL REFERENCE |
 | :--- | :--- |
-| **Component** | **Architectural Implementation** |
-| **Event Routing** | Keyword-Driven Webhook for clinical service mapping |
-| **Logic Layer** | Flex Synthesis Engine (Google Apps Script) |
-| **Standardization** | Maternal Care Protocol Integration (Nursing Standard) |
-| **Audit Path** | Systematic Logging for Healthcare Quality Assurance (CQI) |
+| Interface Layout | Figure 2.0: 5-Grid Health Promotion System |
+| Reference Image | <img src="richmenu.png" alt="Health Promotion Interface" width="100%"> |
+| Description | Client-Side Protocol for Maternal & Child Care |
 
 ---
 
-| EVENT ROUTING MATRIX & SERVICE MAPPING | |
+### III. CORE ARCHITECTURAL LOGIC
+| COMPONENT LAYER | ARCHITECTURAL IMPLEMENTATION |
 | :--- | :--- |
-| **Functional Domain** | **Protocol (Synthesis Handler)** |
-| **Scheduling** | `getPrenatalAppointments` |
-| **Education** | `educatePregnantWomen` / `getPregnancySymptoms` |
-| **Consultation** | `getContactUS` / `getHelpCenter` |
-| **Family Planning** | `getContraceptiveInfo` |
-| **Public Relations** | `communicationAndSupport` |
-| **Specialized Care** | `supportMotherChildWellbeing` |
-| **Clinical Guidance** | `getWhenToGetCare` |
-| **Institutional** | `getAboutUs` / `getTeam` |
-| **Information** | `getFaq` |
+| Event Routing | Keyword-Driven Webhook for clinical service mapping |
+| Logic Layer | Flex Message Synthesis Engine (Google Apps Script) |
+| Standardization | Maternal Care Protocol Integration (Nursing Standard) |
+| Audit Path | Systematic Logging for Healthcare Quality Assurance (CQI) |
 
 ---
 
-| METADATA & COMPLIANCE | |
+### IV. EVENT ROUTING MATRIX
+| OPERATIONAL DOMAIN | PROTOCOL (SYNTHESIS HANDLER) |
 | :--- | :--- |
-| **Architect** | Ratchanon Noknoy |
-| **Requirement Basis** | Senior Professional Nursing Care Standards |
-| **Status** | Production Ready / HIPAA-Aligned Data Flow |
+| การนัดหมาย | getPrenatalAppointments() |
+| ให้ความรู้ / อาการผิดปกติ | educatePregnantWomen() / getPregnancySymptoms() |
+| ติดต่อเรา / ช่วยเหลือ | getContactUS() / getHelpCenter() |
+| การวางแผนครอบครัว | getContraceptiveInfo() |
+| ประชาสัมพันธ์ | communicationAndSupport() |
+| บริการพิเศษ | supportMotherChildWellbeing() |
+| อาการที่ควรมาพบแพทย์ | getWhenToGetCare() |
+| เกี่ยวกับเรา / คณะผู้จัดทำ | getAboutUs() / getTeam() |
+| คำถามที่พบบ่อย | getFaq() |
+
+---
+
+### V. GOVERNANCE & COMPLIANCE
+| CATEGORY | STATUS & VERIFICATION |
+| :--- | :--- |
+| Requirement Source | Senior Professional Nursing Care Standards |
+| Executive Approval | Verified by Kamphaeng Phet Municipal Secretary |
+| Data Privacy | Thailand PDPA & Healthcare Data Privacy Standards |
+| Development Speed | Rapid Adaptation to Clinical Protocols |
+
+---
+<p align="center"><small>This document serves as the Official Technical Framework for Health Promotion Services</small></p>
