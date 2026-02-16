@@ -15,10 +15,12 @@
 ---
 
 ### [ SECTION II : INTERFACE ARCHITECTURAL VISUALIZATION ]
-| COMPONENT ID | VISUAL REFERENCE SYSTEM |
-| :--- | :--- |
-| **KPC-UI-002** | ![Interface Protocol Figure](richmenu.png) |
-| **Description** | Figure 2.0: Official 5-Grid Health Promotion Interface Protocol |
+
+<p align="center">
+  <img src="richmenu.png" alt="Health Promotion Interface Protocol" width="600">
+  <br>
+  <em><strong>Figure 2.0:</strong> Official 5-Grid Health Promotion Interface Protocol (KPC-UI-002)</em>
+</p>
 
 ---
 
@@ -50,10 +52,10 @@
 ### [ SECTION V : EXECUTIVE VERIFICATION & COMPLIANCE ]
 | COMPLIANCE CATEGORY | AUTHENTICATION STATUS |
 | :--- | :--- |
-| **Institutional Approval** | Verified by Kamphaeng Phet Municipal Secretary |
-| **Requirement Source** | Clinical Frontline Requirements (Senior Professional Nurse) |
-| **Legal Framework** | Thailand Personal Data Protection Act (PDPA) |
-| **Engineering Status** | Production Environment / Rapid Deployment Certified |
+| Institutional Approval | Verified by Kamphaeng Phet Municipal Secretary |
+| Requirement Source | Clinical Frontline Requirements (Senior Professional Nurse) |
+| Legal Framework | Thailand Personal Data Protection Act (PDPA) |
+| Engineering Status | Production Environment / Rapid Deployment Certified |
 
 ---
 
